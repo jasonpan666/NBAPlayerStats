@@ -1,0 +1,23 @@
+{
+  "name": "nba-web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd": "^3.8.2",
+    "d3-shotchart": "0.0.2",
+    "lodash": "^4.17.10",
+    "nba": "^4.2.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-scripts": "1.1.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "s3deploy": "s3-deploy './build/**' --cwd './build' --region aws s3 --bucket nba-player-visual-zhenyupan",
+    "build_deploy": "npm run build && npm run s3deploy"
+  },
+  "homepage": "."
+}
